@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Notary | Scottsdale Notary Pros | Same-Day Appointments</title>
+  <meta name="description" content="Book a mobile notary in Scottsdale AZ. Same-day appointments available 7 days a week. Fill out our form or call (480) 662-8613.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://scottsdalenotarypros.com/contact">
+  <link rel="icon" href="logo.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book a Notary | Scottsdale Notary Pros">
+  <meta property="og:description" content="Book a mobile notary in Scottsdale AZ. Same-day appointments available 7 days a week. Call (480) 662-8613.">
+  <meta property="og:image" content="images/business-handshake.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+  <!-- ============================================================== NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="logo.png" alt="Scottsdale Notary Pros logo">
+        <span>Scottsdale Notary Pros</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="contact.html">Book Now</a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-overlay" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <a class="nav-overlay-cta" href="contact.html">Book Now</a>
+  </nav>
+
+  <main>
+
+    <!-- ========================================================== HERO -->
+    <section class="page-hero page-hero-dots">
+      <div class="page-hero-content">
+        <h1>Book Your Appointment</h1>
+        <p class="page-hero-sub">Fill out the form below and we'll confirm within the hour. Available 7 days a week.</p>
+      </div>
+    </section>
+
+    <!-- ================================================= CONTACT LAYOUT -->
+    <section class="section section-white">
+      <div class="contact-layout">
+
+        <!-- ------------------------------------------------- LEFT: FORM -->
+        <div class="form-card fade-in">
+          <h2>Request an Appointment</h2>
+          <p>Tell us a little about your documents and when you'd like to meet.</p>
+
+          <div class="form-error" id="form-error">
+            Sorry — your request couldn't be sent. Please call
+            <a href="tel:+14806628613">(480) 662-8613</a> or email
+            <a href="mailto:lkbr.marketing@gmail.com">lkbr.marketing@gmail.com</a>
+            and we'll get you booked right away.
+          </div>
+
+          <form id="notary-form" action="https://formspree.io/f/moejyozw" method="POST">
+            <input type="hidden" name="_subject" value="New Notary Appointment Request — Scottsdale Notary Pros">
+
+            <div class="field field-row">
+              <div class="field">
+                <label for="first-name">First Name <span class="req">*</span></label>
+                <input type="text" id="first-name" name="First Name" autocomplete="given-name" required>
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name <span class="req">*</span></label>
+                <input type="text" id="last-name" name="Last Name" autocomplete="family-name" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="Email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="Phone" autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="service-type">Service Type needed <span class="req">*</span></label>
+              <select id="service-type" name="Service Type" required>
+                <option value="">Select a service…</option>
+                <option>Power of Attorney</option>
+                <option>Will or Trust Document</option>
+                <option>Affidavit or Sworn Statement</option>
+                <option>Medical Directive</option>
+                <option>Real Estate Signing</option>
+                <option>Loan Document Signing</option>
+                <option>Business or Corporate Document</option>
+                <option>Copy Certification</option>
+                <option>Other — Please Describe</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="signatures">Number of signatures needed</label>
+              <select id="signatures" name="Number of Signatures">
+                <option value="">Select…</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferred appointment date</label>
+              <input type="date" id="date" name="Preferred Date">
+            </div>
+
+            <div class="field">
+              <label for="time">Preferred time</label>
+              <select id="time" name="Preferred Time">
+                <option value="">Select…</option>
+                <option>Morning (8am–12pm)</option>
+                <option>Afternoon (12pm–5pm)</option>
+                <option>Evening (5pm–8pm)</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="location-type">Service location — will we come to you?</label>
+              <select id="location-type" name="Service Location">
+                <option value="">Select…</option>
+                <option>Yes — please come to my location</option>
+                <option>No — I will come to you</option>
+                <option>Remote/Online Notary</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="address">Your address or preferred meeting location</label>
+              <input type="text" id="address" name="Address or Meeting Location"
+                     placeholder="e.g. 123 Main St Scottsdale AZ or Starbucks on Scottsdale Rd">
+            </div>
+
+            <div class="field">
+              <label for="witnesses">Do you have all required witnesses if needed?</label>
+              <select id="witnesses" name="Witnesses">
+                <option value="">Select…</option>
+                <option>Yes</option>
+                <option>No — I need guidance on this</option>
+                <option>Not Applicable</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Additional notes or questions</label>
+              <textarea id="notes" name="Additional Notes"
+                        placeholder="Tell us anything else about your documents or appointment needs"></textarea>
+            </div>
+
+            <button class="form-submit" type="submit">Request My Appointment →</button>
+            <p class="form-footnote">We confirm every request within the hour · Available 7 days a week</p>
+          </form>
+
+          <!-- Success state -->
+          <div class="form-success" id="form-success" role="status" aria-live="polite">
+            <div class="success-check" aria-hidden="true"></div>
+            <h2>Appointment Request Received!</h2>
+            <p>We'll confirm your appointment within the hour. If you need immediate assistance call (480) 662-8613.</p>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------- RIGHT: INFO CARD -->
+        <aside class="info-card fade-in">
+          <h2>What Happens Next?</h2>
+
+          <div class="info-steps">
+            <div class="info-step">
+              <span class="info-step-num">01</span>
+              <div>
+                <h3>We Review Your Request</h3>
+                <p>We check your details and confirm availability within the hour.</p>
+              </div>
+            </div>
+
+            <div class="info-step">
+              <span class="info-step-num">02</span>
+              <div>
+                <h3>We Confirm Your Appointment</h3>
+                <p>You'll receive a confirmation via call or text with your notary's arrival time.</p>
+              </div>
+            </div>
+
+            <div class="info-step">
+              <span class="info-step-num">03</span>
+              <div>
+                <h3>We Come to You</h3>
+                <p>Your notary arrives at your location, ready to notarize your documents professionally.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-divider" aria-hidden="true"></div>
+
+          <div class="info-contact">
+            <div class="info-contact-item">
+              <span class="ic" aria-hidden="true">📞</span>
+              <a href="tel:+14806628613">(480) 662-8613</a>
+            </div>
+            <div class="info-contact-item">
+              <span class="ic" aria-hidden="true">✉</span>
+              <a href="mailto:lkbr.marketing@gmail.com">lkbr.marketing@gmail.com</a>
+            </div>
+            <div class="info-contact-item">
+              <span class="ic" aria-hidden="true">📍</span>
+              <span>Serving Scottsdale &amp; Maricopa County</span>
+            </div>
+            <div class="info-contact-item gold">
+              <span class="ic" aria-hidden="true">🕐</span>
+              <span>Available 7 Days a Week</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ===================================================== TRUST STRIP -->
+    <section class="section section-cream">
+      <div class="inner">
+        <div class="grid grid-4">
+          <article class="trust-strip-card fade-in">
+            <span class="ic" aria-hidden="true">🏛️</span>
+            <h3>Arizona Commissioned Notary</h3>
+          </article>
+          <article class="trust-strip-card fade-in">
+            <span class="ic" aria-hidden="true">🛡️</span>
+            <h3>Bonded &amp; Insured</h3>
+          </article>
+          <article class="trust-strip-card fade-in">
+            <span class="ic" aria-hidden="true">⚡</span>
+            <h3>Same-Day Available</h3>
+          </article>
+          <article class="trust-strip-card fade-in">
+            <span class="ic" aria-hidden="true">💰</span>
+            <h3>Flat-Rate Pricing</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================== FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Scottsdale Notary Pros logo">
+          <span>Scottsdale Notary Pros</span>
+        </div>
+        <p class="footer-tag">Mobile &amp; Remote Notary Services</p>
+        <p class="footer-loc">Scottsdale, Arizona</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Phone: <a href="tel:+14806628613">(480) 662-8613</a></li>
+          <li>Email: <a href="mailto:lkbr.marketing@gmail.com">lkbr.marketing@gmail.com</a></li>
+          <li class="footer-avail">Available 7 Days a Week</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Scottsdale Notary Pros · Scottsdale, Arizona · Arizona Commissioned Notary Public</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
