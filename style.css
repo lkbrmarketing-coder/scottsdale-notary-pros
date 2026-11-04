@@ -1203,13 +1203,19 @@ textarea:focus {
   .grid-4, .grid-5 { grid-template-columns: repeat(2, 1fr); }
   .nav-links { gap: 24px; }
   .nav-brand span { font-size: 17px; }
+  .steps-4 { grid-template-columns: repeat(2, 1fr); row-gap: 44px; }
+  .steps-4::before { display: none; }
   .contact-layout { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 860px) {
+/* Five nav links + CTA need more room, so the hamburger takes over at 960px. */
+@media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .nav-toggle { display: flex; }
+}
+
+@media (max-width: 860px) {
   .grid-3 { grid-template-columns: 1fr; }
 }
 
@@ -1296,3 +1302,192 @@ textarea:focus {
 .form-error.show { display: block; }
 
 .form-error a { color: #7d2f2a; font-weight: 700; text-decoration: underline; }
+
+/* ============================================= Loan signing additions === */
+
+/* NNA badge — always shown on a white plate, never stretched or cropped. */
+.nna-badge {
+  display: inline-block;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 10px;
+  line-height: 0;
+}
+
+.nna-badge a { display: inline-block; line-height: 0; }
+
+.nna-badge img,
+.footer-nna img {
+  max-width: none;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.nna-badge-hero { margin-top: 32px; }
+
+.nna-badge-lg {
+  padding: 22px 24px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.nna-badge-lg p {
+  margin: 14px 0 0;
+  line-height: 1.4;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  max-width: 140px;
+}
+
+/* Footer badge (90x90) above the copyright bar */
+.footer-nna {
+  display: flex;
+  justify-content: center;
+  padding: 0 24px 32px;
+}
+
+.footer-nna a {
+  display: inline-block;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 8px;
+  line-height: 0;
+}
+
+.footer-nna img { width: 90px; height: 90px; }
+
+/* Clickable card (home services preview) */
+.card-link { display: block; color: inherit; }
+.card-link:hover { color: inherit; }
+.card-more {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.card-link:hover .card-more { color: var(--gold); }
+
+/* Title / escrow section on the home page */
+.section-navy + .section-navy { border-top: 1px solid rgba(201, 169, 110, 0.3); }
+
+.pro-split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 56px;
+  align-items: center;
+}
+
+.pro-copy .section-sub { margin-left: 0; margin-bottom: 32px; }
+.pro-copy .btn-row { justify-content: flex-start; }
+
+/* Shared text helpers */
+.lead-muted {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.doc-list-2col {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 32px;
+  margin-bottom: 36px;
+}
+
+.td-sub {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Loan signings: intro + credentials card */
+.lsa-intro {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.lsa-intro .lead-muted { margin-bottom: 0; }
+
+.cred-card {
+  background: var(--cream);
+  border-top: 4px solid var(--gold);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.cred-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 18px;
+}
+
+.cred-card h3 { font-size: 20px; margin: 18px 0 6px; }
+.cred-card p { color: var(--text-muted); font-size: 14px; margin: 0; }
+
+/* Four-step process */
+.steps-4 { grid-template-columns: repeat(4, 1fr); max-width: var(--max); }
+.steps-4::before { left: 12%; right: 12%; }
+
+/* Contact: booking column */
+.booking-col { display: grid; gap: 48px; }
+
+.calendly-inline-widget {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.booking-note {
+  margin: 20px 0 0;
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.question-card {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+
+.question-card h2 { font-size: 26px; }
+
+/* Contact trust strip badge card */
+.trust-strip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-strip-nna .nna-badge { padding: 0; margin-bottom: 12px; }
+
+@media (max-width: 860px) {
+  .pro-split,
+  .lsa-intro { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .pro-copy .section-sub { margin-left: auto; margin-right: auto; }
+  .pro-copy .btn-row { justify-content: center; }
+  .lsa-intro .cred-card { max-width: 380px; margin: 0 auto; width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .doc-list-2col { grid-template-columns: 1fr; }
+  .steps-4 { grid-template-columns: 1fr; }
+  .question-card h2 { font-size: 24px; }
+}
+
+.pro-split .nna-badge-lg { justify-self: center; }

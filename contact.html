@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book a Notary | Scottsdale Notary Pros | Same-Day Appointments</title>
-  <meta name="description" content="Book a mobile notary in Scottsdale AZ. Same-day appointments available 7 days a week. Fill out our form or call (480) 662-8613.">
+  <meta name="description" content="Book a mobile notary or loan signing agent in Scottsdale AZ. Same-day appointments available 7 days a week. Book online or call (480) 662-8613.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://scottsdalenotarypros.com/contact">
   <link rel="icon" href="logo.png">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Book a Notary | Scottsdale Notary Pros">
-  <meta property="og:description" content="Book a mobile notary in Scottsdale AZ. Same-day appointments available 7 days a week. Call (480) 662-8613.">
+  <meta property="og:description" content="Book a mobile notary or loan signing agent in Scottsdale AZ. Same-day appointments available 7 days a week. Call (480) 662-8613.">
   <meta property="og:image" content="images/business-handshake.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+        <a href="loan-signings.html">Loan Signings</a>
         <a href="pricing.html">Pricing</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -48,6 +49,7 @@
   <nav class="nav-overlay" id="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
+    <a href="loan-signings.html">Loan Signings</a>
     <a href="pricing.html">Pricing</a>
     <a href="contact.html">Contact</a>
     <a class="nav-overlay-cta" href="contact.html">Book Now</a>
@@ -59,7 +61,7 @@
     <section class="page-hero page-hero-dots">
       <div class="page-hero-content">
         <h1>Book Your Appointment</h1>
-        <p class="page-hero-sub">Fill out the form below and we'll confirm within the hour. Available 7 days a week.</p>
+        <p class="page-hero-sub">Choose a time below — mobile notary and loan signings, 7 days a week.</p>
       </div>
     </section>
 
@@ -67,127 +69,61 @@
     <section class="section section-white">
       <div class="contact-layout">
 
-        <!-- ------------------------------------------------- LEFT: FORM -->
-        <div class="form-card fade-in">
-          <h2>Request an Appointment</h2>
-          <p>Tell us a little about your documents and when you'd like to meet.</p>
+        <!-- ---------------------------------------------- LEFT: BOOKING -->
+        <div class="booking-col fade-in">
+          <div class="form-card">
+            <h2>Schedule Your Appointment</h2>
+            <p>Pick a day and time that works for you. Mobile notary and loan signing appointments available 7 days a week.</p>
 
-          <div class="form-error" id="form-error">
-            Sorry — your request couldn't be sent. Please call
-            <a href="tel:+14806628613">(480) 662-8613</a> or email
-            <a href="mailto:lkbr.marketing@gmail.com">lkbr.marketing@gmail.com</a>
-            and we'll get you booked right away.
+            <div class="calendly-inline-widget" data-url="https://calendly.com/scottsdalenotarypros/mobile-notary-appointment?hide_gdpr_banner=1&primary_color=1B3A5C" style="min-width:320px;height:780px;"></div>
+            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+            <p class="booking-note">Booking a loan signing? Choose 'Loan Signing' as your service type and have your title or escrow company's contact info ready.</p>
           </div>
 
-          <form id="notary-form" action="https://formspree.io/f/moejyozw" method="POST">
-            <input type="hidden" name="_subject" value="New Notary Appointment Request — Scottsdale Notary Pros">
+          <div class="form-card question-card">
+            <h2>Have a question first?</h2>
+            <p>Send us a quick message and we'll get back to you within the hour.</p>
 
-            <div class="field field-row">
-              <div class="field">
-                <label for="first-name">First Name <span class="req">*</span></label>
-                <input type="text" id="first-name" name="First Name" autocomplete="given-name" required>
+            <div class="form-error" id="form-error">
+              Sorry — your message couldn't be sent. Please call
+              <a href="tel:+14806628613">(480) 662-8613</a> or email
+              <a href="mailto:lkbr.marketing@gmail.com">lkbr.marketing@gmail.com</a>.
+            </div>
+
+            <form id="notary-form" action="https://formspree.io/f/moejyozw" method="POST">
+              <input type="hidden" name="_subject" value="Question — Scottsdale Notary Pros">
+
+              <div class="field field-row">
+                <div class="field">
+                  <label for="q-name">Name <span class="req">*</span></label>
+                  <input type="text" id="q-name" name="Name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="q-phone">Phone</label>
+                  <input type="tel" id="q-phone" name="Phone" autocomplete="tel">
+                </div>
               </div>
+
               <div class="field">
-                <label for="last-name">Last Name <span class="req">*</span></label>
-                <input type="text" id="last-name" name="Last Name" autocomplete="family-name" required>
+                <label for="q-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="q-email" name="Email" autocomplete="email" required>
               </div>
+
+              <div class="field">
+                <label for="q-message">Your question <span class="req">*</span></label>
+                <textarea id="q-message" name="Question" required
+                          placeholder="Tell us about your documents or what you need help with"></textarea>
+              </div>
+
+              <button class="form-submit" type="submit">Send Question →</button>
+            </form>
+
+            <div class="form-success" id="form-success" role="status" aria-live="polite">
+              <div class="success-check" aria-hidden="true"></div>
+              <h2>Message Received!</h2>
+              <p>We'll get back to you within the hour. If you need immediate assistance call (480) 662-8613.</p>
             </div>
-
-            <div class="field">
-              <label for="email">Email Address <span class="req">*</span></label>
-              <input type="email" id="email" name="Email" autocomplete="email" required>
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone Number <span class="req">*</span></label>
-              <input type="tel" id="phone" name="Phone" autocomplete="tel" required>
-            </div>
-
-            <div class="field">
-              <label for="service-type">Service Type needed <span class="req">*</span></label>
-              <select id="service-type" name="Service Type" required>
-                <option value="">Select a service…</option>
-                <option>Power of Attorney</option>
-                <option>Will or Trust Document</option>
-                <option>Affidavit or Sworn Statement</option>
-                <option>Medical Directive</option>
-                <option>Real Estate Signing</option>
-                <option>Loan Document Signing</option>
-                <option>Business or Corporate Document</option>
-                <option>Copy Certification</option>
-                <option>Other — Please Describe</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="signatures">Number of signatures needed</label>
-              <select id="signatures" name="Number of Signatures">
-                <option value="">Select…</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="date">Preferred appointment date</label>
-              <input type="date" id="date" name="Preferred Date">
-            </div>
-
-            <div class="field">
-              <label for="time">Preferred time</label>
-              <select id="time" name="Preferred Time">
-                <option value="">Select…</option>
-                <option>Morning (8am–12pm)</option>
-                <option>Afternoon (12pm–5pm)</option>
-                <option>Evening (5pm–8pm)</option>
-                <option>Flexible</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="location-type">Service location — will we come to you?</label>
-              <select id="location-type" name="Service Location">
-                <option value="">Select…</option>
-                <option>Yes — please come to my location</option>
-                <option>No — I will come to you</option>
-                <option>Remote/Online Notary</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="address">Your address or preferred meeting location</label>
-              <input type="text" id="address" name="Address or Meeting Location"
-                     placeholder="e.g. 123 Main St Scottsdale AZ or Starbucks on Scottsdale Rd">
-            </div>
-
-            <div class="field">
-              <label for="witnesses">Do you have all required witnesses if needed?</label>
-              <select id="witnesses" name="Witnesses">
-                <option value="">Select…</option>
-                <option>Yes</option>
-                <option>No — I need guidance on this</option>
-                <option>Not Applicable</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="notes">Additional notes or questions</label>
-              <textarea id="notes" name="Additional Notes"
-                        placeholder="Tell us anything else about your documents or appointment needs"></textarea>
-            </div>
-
-            <button class="form-submit" type="submit">Request My Appointment →</button>
-            <p class="form-footnote">We confirm every request within the hour · Available 7 days a week</p>
-          </form>
-
-          <!-- Success state -->
-          <div class="form-success" id="form-success" role="status" aria-live="polite">
-            <div class="success-check" aria-hidden="true"></div>
-            <h2>Appointment Request Received!</h2>
-            <p>We'll confirm your appointment within the hour. If you need immediate assistance call (480) 662-8613.</p>
           </div>
         </div>
 
@@ -199,16 +135,16 @@
             <div class="info-step">
               <span class="info-step-num">01</span>
               <div>
-                <h3>We Review Your Request</h3>
-                <p>We check your details and confirm availability within the hour.</p>
+                <h3>Pick Your Time</h3>
+                <p>Choose your service and a time that works for you using the scheduler.</p>
               </div>
             </div>
 
             <div class="info-step">
               <span class="info-step-num">02</span>
               <div>
-                <h3>We Confirm Your Appointment</h3>
-                <p>You'll receive a confirmation via call or text with your notary's arrival time.</p>
+                <h3>We Confirm the Details</h3>
+                <p>We reach out by call or text to confirm your location, documents, and arrival time.</p>
               </div>
             </div>
 
@@ -254,9 +190,11 @@
             <span class="ic" aria-hidden="true">🏛️</span>
             <h3>Arizona Commissioned Notary</h3>
           </article>
-          <article class="trust-strip-card fade-in">
-            <span class="ic" aria-hidden="true">🛡️</span>
-            <h3>Bonded &amp; Insured</h3>
+          <article class="trust-strip-card trust-strip-nna fade-in">
+            <div class="nna-badge">
+              <a href="https://www.nationalnotary.org/knowledge-center/signing-agent-resources" target="_blank" rel="noopener"><img src="https://www.nationalnotary.org/Image%20Library/NNA/membership%20images/nsa_member_badge.png" alt="Certified Notary Signing Agent" width="100" height="100" border="0" title="Certified Notary Signing Agent" /></a>
+            </div>
+            <h3>Certified Notary Signing Agent</h3>
           </article>
           <article class="trust-strip-card fade-in">
             <span class="ic" aria-hidden="true">⚡</span>
@@ -280,7 +218,7 @@
           <img src="logo.png" alt="Scottsdale Notary Pros logo">
           <span>Scottsdale Notary Pros</span>
         </div>
-        <p class="footer-tag">Mobile &amp; Remote Notary Services</p>
+        <p class="footer-tag">Mobile Notary &amp; Loan Signing Agent</p>
         <p class="footer-loc">Scottsdale, Arizona</p>
       </div>
 
@@ -289,6 +227,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="loan-signings.html">Loan Signings</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -302,6 +241,10 @@
           <li class="footer-avail">Available 7 Days a Week</li>
         </ul>
       </div>
+    </div>
+
+    <div class="footer-nna">
+      <a href="https://www.nationalnotary.org/knowledge-center/signing-agent-resources" target="_blank" rel="noopener"><img src="https://www.nationalnotary.org/Image%20Library/NNA/membership%20images/nsa_member_badge.png" alt="Certified Notary Signing Agent" width="100" height="100" border="0" title="Certified Notary Signing Agent" /></a>
     </div>
 
     <div class="footer-bottom">
