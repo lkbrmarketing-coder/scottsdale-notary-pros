@@ -764,6 +764,22 @@ body.nav-open .nav-brand span { color: var(--white); }
   white-space: nowrap;
 }
 
+/* Three-column fee table: fee in the middle column, notes on the right */
+.price-table-3 thead th:last-child { text-align: left; }
+
+.price-table-3 td:nth-child(2) {
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.price-table-3 td:last-child {
+  text-align: left;
+  font-weight: 400;
+  color: var(--text-muted);
+  white-space: normal;
+}
+
 .table-note {
   font-size: 14px;
   color: var(--text-muted);
