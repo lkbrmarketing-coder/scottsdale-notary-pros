@@ -1,13 +1,9 @@
 # Changelog
 
 ## November 10, 2026
+- Changed contact email site-wide to Scottsdalenotarypros@gmail.com
 - Rebuilt pricing page with fixed prices: loan signings, general notary services, travel fees by distance from 85260, add-ons, and example totals
-- Updated loan-signings fee table and site-wide fee wording to match
-
-## November 10, 2026
-- Changed contact email site-wide to Lukas.d.Karlsson55@gmail.com
-- Rebuilt pricing page with loan signing fee ranges, general notary fees, add-on fees, and a "What Your Signing Fee Covers" section
-- Updated loan-signings fee table to match; replaced "flat-rate" wording with upfront-fee wording
+- Updated loan-signings fee table and site-wide fee wording to match; replaced "flat-rate" wording with upfront-fee wording
 
 ## November 4, 2026
 - Repositioned site as mobile notary and loan signing agent, removed remote wording
