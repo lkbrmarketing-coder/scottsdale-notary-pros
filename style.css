@@ -804,6 +804,9 @@ body.nav-open .nav-brand span { color: var(--white); }
   color: var(--navy);
 }
 
+/* Keep the callout visible when it sits on a cream section */
+.section-cream .example-box { background: var(--white); }
+
 /* ------------------------------------------------------ Numbered cards --- */
 
 .reminder-list { display: grid; gap: 16px; max-width: 820px; margin: 0 auto; }
